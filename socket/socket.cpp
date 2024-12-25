@@ -22,7 +22,7 @@ Socket::Socket(int socket_fd)
 
 Socket::~Socket()
 {
-  close();
+  // close();
 }
       
 int Socket::fd() const
