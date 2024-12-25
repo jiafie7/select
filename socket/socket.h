@@ -23,6 +23,7 @@ namespace melon
       Socket(int socket_fd);
       ~Socket();
       
+      int fd() const;
       bool bind(const std::string& ip, int port);
       bool listen(int backlog);
       bool connect(const std::string& ip, int port);
@@ -30,6 +31,7 @@ namespace melon
       int send(const char* buf, int len);
       int recv(char* buf, int len);
       void close();
+      void clear();
 
       bool setNonBlocking();
       bool setSendBuffer(int size);

@@ -24,6 +24,11 @@ Socket::~Socket()
 {
   close();
 }
+      
+int Socket::fd() const
+{
+  return m_socket_fd;
+}
  
 bool Socket::bind(const std::string& ip, int port)
 {
@@ -107,6 +112,11 @@ void Socket::close()
     ::close(m_socket_fd);
     m_socket_fd = 0;
   }
+}
+
+void Socket::clear()
+{
+  m_socket_fd = 0;
 }
 
 bool Socket::setNonBlocking()
