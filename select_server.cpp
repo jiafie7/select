@@ -63,6 +63,8 @@ int main()
     }
   }
 
+  server.close();
+
   return 0;
 }
 

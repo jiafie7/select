@@ -2,6 +2,9 @@
 
 #include "socket/server_socket.h"
 #include "socket/selector.h"
+#include "utility/singleton.h"
+
+using namespace melon::utility;
 
 namespace melon
 {
@@ -9,9 +12,10 @@ namespace melon
   {
     class SocketHandler
     {
+      SINGLETON(SocketHandler);
     public:
-      SocketHandler() = default;
-      ~SocketHandler() = default;
+      // SocketHandler() = default;
+      // ~SocketHandler() = default;
 
       void listen(const std::string& ip, int port);
       void attach(int socket_fd);

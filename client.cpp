@@ -14,5 +14,7 @@ int main()
   client.recv(buf, sizeof(buf));
   log_debug("recv: %s", buf);
 
+  client.close();
+
   return 0;
 }

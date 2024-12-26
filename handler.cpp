@@ -6,11 +6,11 @@ int main()
 {
   Singleton<LogSystem>::getInstance()->open("./../handler.log");
 
-  SocketHandler handler;
+  SocketHandler* handler = Singleton<SocketHandler>::getInstance();
 
-  handler.listen("127.0.0.1", 7777);
+  handler->listen("127.0.0.1", 7777);
   
-  handler.handle(2000);
+  handler->handle(2000);
 
   return 0;
 }
