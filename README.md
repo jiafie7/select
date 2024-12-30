@@ -1,6 +1,6 @@
 # select
 
-This C++ Select and Socket Handling Framework simplifies the use of select system calls and socket management in server applications. The library encapsulates adding, removing, checking, and handling file descriptors into a Selector class. It also introduces SocketHandler for managing socket listening and operations, and an EchoTask class to handle the business logic, achieving a clean separation between framework and application code.
+This C++ Select-based Socket Handling Framework simplifies the use of select system calls and socket management in server applications. The library encapsulates adding, removing, checking, and handling file descriptors into a Selector class. It also introduces SocketHandler for managing socket listening and operations, and an EchoTask class to handle the business logic, achieving a clean separation between framework and application code.
 
 ## Features
 
